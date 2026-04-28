@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anurag Panchal - B.Tech CSE Student, Full-Stack Developer & AI/ML Enthusiast" />
+  <meta name="keywords" content="Anurag Panchal, developer, portfolio, CSE, IILM University, web developer, AI, ML" />
+  <title>Anurag Panchal | Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADER
+  ============================================================ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">AP</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing...</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCROLL PROGRESS BAR
+  ============================================================ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AP<span class="logo-dot"></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero">
+    <!-- Animated background blobs -->
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Canvas for particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="hero-content">
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">
+        <span class="name-line">Anurag</span>
+        <span class="name-line accent">Panchal</span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="typed-prefix">I'm a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </p>
+      <p class="hero-sub">B.Tech CSE @ IILM University &bull; Building the future one line at a time</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Contact Me</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/AnuragPanchal6" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anurag-panchal-1563ba304" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:anuragpanchalx6@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <p>Scroll</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> About</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image -->
+        <div class="about-image-wrap reveal">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder">
+              <div class="avatar-initials"><img src="images/formal.jpg.jpeg" alt=""></div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="img-decoration">
+              <div class="img-dot-grid"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text reveal">
+          <p class="about-intro">
+            I'm a <strong>B.Tech Computer Science Engineering student</strong> at IILM University, Greater Noida (Batch 2023–27), passionate about building innovative solutions through code.
+          </p>
+          <p class="about-body">
+            From crafting responsive web applications to training deep learning models, I love turning ideas into working products. I have hands-on experience with full-stack web development, machine learning, and computer vision — and I'm always hungry to learn more.
+          </p>
+
+          <!-- Strength cards -->
+          <div class="strength-cards">
+            <div class="strength-card">
+              <i class="fas fa-code"></i>
+              <span>Full-Stack Dev</span>
+            </div>
+            <div class="strength-card">
+              <i class="fas fa-brain"></i>
+              <span>AI / ML</span>
+            </div>
+            <div class="strength-card">
+              <i class="fas fa-eye"></i>
+              <span>Computer Vision</span>
+            </div>
+            <div class="strength-card">
+              <i class="fas fa-database"></i>
+              <span>Databases</span>
+            </div>
+          </div>
+
+          <!-- Quick info -->
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">📍 Location</span>
+              <span class="info-val">Faridabad, Haryana</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">📞 Phone</span>
+              <span class="info-val">+91 7678470909</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">🎓 Degree</span>
+              <span class="info-val">B.Tech CSE (2023-27)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">✉️ Email</span>
+              <span class="info-val">anuragpanchalx6@gmail.com</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary mt-2">Let's Connect <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Skills</span>
+        <h2 class="section-title">My Toolkit</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-terminal"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill" data-level="85">
+              <span class="skill-icon">🐍</span>
+              <span class="skill-name">Python</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <span class="skill-icon">⚡</span>
+              <span class="skill-name">C</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-pill" data-level="70">
+              <span class="skill-icon">☕</span>
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-pill" data-level="65">
+              <span class="skill-icon">🔧</span>
+              <span class="skill-name">SQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-globe"></i>
+            <h3>Web Dev</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <span class="skill-icon">🌐</span>
+              <span class="skill-name">HTML5</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">🎨</span>
+              <span class="skill-name">CSS3</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">⚛️</span>
+              <span class="skill-name">React</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">🟢</span>
+              <span class="skill-name">Node.js</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-robot"></i>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <span class="skill-icon">🧠</span>
+              <span class="skill-name">TensorFlow</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">📊</span>
+              <span class="skill-name">Scikit-Learn</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">👁️</span>
+              <span class="skill-name">OpenCV</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">🔢</span>
+              <span class="skill-name">NumPy / Pandas</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Databases -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & DBs</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <span class="skill-icon">🐙</span>
+              <span class="skill-name">Git / GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">🗄️</span>
+              <span class="skill-name">MySQL</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">🍃</span>
+              <span class="skill-name">MongoDB</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-pill">
+              <span class="skill-icon">💻</span>
+              <span class="skill-name">VS Code / PyCharm</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech badge cloud -->
+      <div class="tech-cloud reveal">
+        <span class="tech-badge">CNN</span>
+        <span class="tech-badge">LSTM</span>
+        <span class="tech-badge">Bi-LSTM</span>
+        <span class="tech-badge">ConvLSTM</span>
+        <span class="tech-badge">Random Forest</span>
+        <span class="tech-badge">Linear Regression</span>
+        <span class="tech-badge">VGG16</span>
+        <span class="tech-badge">ResNet50</span>
+        <span class="tech-badge">Express.js</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">SQLite</span>
+        <span class="tech-badge">Jupyter</span>
+        <span class="tech-badge">Google Colab</span>
+        <span class="tech-badge">IoT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Ahaar -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">🍱</div>
+              <div class="project-links">
+                <a href="https://github.com/AnuragPanchal6" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+                <!-- <a href="#" target="_blank" title="Live Demo" class="proj-link"><i class="fas fa-external-link-alt"></i></a> -->
+              </div>
+            </div>
+            <div class="project-tag-row">
+              <span class="proj-tag web">Web App</span>
+              <span class="proj-tag">Mar 2025</span>
+            </div>
+            <h3 class="project-title">Ahaar Food Donation</h3>
+            <p class="project-desc">A web-based platform connecting food donors with those in need, reducing food wastage and enabling efficient food distribution across communities.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Project 2: Hand Gesture -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">✋</div>
+              <div class="project-links">
+                <a href="https://github.com/AnuragPanchal6" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+                <!-- <a href="#" target="_blank" title="Live Demo" class="proj-link"><i class="fas fa-external-link-alt"></i></a> -->
+              </div>
+            </div>
+            <div class="project-tag-row">
+              <span class="proj-tag ai">AI / ML</span>
+              <span class="proj-tag">Feb 2025</span>
+            </div>
+            <h3 class="project-title">Hand Gesture Recognition</h3>
+            <p class="project-desc">A deep learning system that detects and classifies hand gestures from image sequences using CNN, LSTM, and ConvLSTM models for intuitive human-computer interaction.</p>
+            <div class="project-tech">
+              <span>Python</span><span>CNN</span><span>LSTM</span><span>ConvLSTM</span><span>OpenCV</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Project 3: Age & Gender Prediction -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">👤</div>
+              <div class="project-links">
+                <a href="https://github.com/AnuragPanchal6" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+                <!-- <a href="#" target="_blank" title="Live Demo" class="proj-link"><i class="fas fa-external-link-alt"></i></a> -->
+              </div>
+            </div>
+            <div class="project-tag-row">
+              <span class="proj-tag cv">Computer Vision</span>
+              <span class="proj-tag">Jan 2025</span>
+            </div>
+            <h3 class="project-title">Age & Gender Prediction</h3>
+            <p class="project-desc">An AI model that analyses facial features using CNN and transfer learning (VGG16, ResNet50) to accurately predict a person's age group and gender in real-time.</p>
+            <div class="project-tech">
+              <span>Python</span><span>TensorFlow</span><span>VGG16</span><span>ResNet50</span><span>OpenCV</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Project 4: Web Internship -->
+        <div class="project-card reveal featured">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <div class="project-icon">🏠</div>
+              <div class="project-links">
+                <a href="https://github.com/AnuragPanchal6" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+                <!-- <a href="#" target="_blank" title="Live Demo" class="proj-link"><i class="fas fa-external-link-alt"></i></a> -->
+              </div>
+            </div>
+            <div class="project-tag-row">
+              <span class="proj-tag web">Full Stack</span>
+              <span class="proj-tag">Internship</span>
+            </div>
+            <h3 class="project-title">RsBath&Tiles Web Platform</h3>
+            <p class="project-desc">Developed responsive web applications during internship at RsBath&Tiles Pvt Ltd, building frontend with React and backend with Node.js/Express + MySQL/MongoDB, deployed on cloud platforms.</p>
+            <div class="project-tech">
+              <span>React</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>MongoDB</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+          <div class="featured-badge">⭐ Featured</div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal">
+        <a href="https://github.com/AnuragPanchal6" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE / EDUCATION SECTION (Timeline)
+  ============================================================ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Journey</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Internship -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content right">
+            <span class="timeline-date">Jun 2025 – Jul 2025</span>
+            <h3>Web Developer Intern</h3>
+            <h4>RsBath&Tiles Pvt Ltd</h4>
+            <ul>
+              <li>Built responsive web apps with HTML, CSS, JavaScript & React</li>
+              <li>Backend with Node.js/Express + MySQL/MongoDB</li>
+              <li>Deployed on cloud platforms using Git/GitHub</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Secretary -->
+        <!-- <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-shield-alt"></i></div>
+          <div class="timeline-content left">
+            <span class="timeline-date">Sep 2025</span>
+            <h3>Secretary</h3>
+            <h4>Code Warriors Club, IILM University</h4>
+            <ul>
+              <li>Organised coding events and workshops</li>
+              <li>Led club initiatives and mentored junior students</li>
+            </ul>
+          </div>
+        </div> -->
+
+        <!-- INNOQUEST Coordinator -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-star"></i></div>
+          <div class="timeline-content left">
+            <span class="timeline-date">Nov 2025</span>
+            <h3>Event Coordinator</h3>
+            <h4>INNOQUEST – Data Science Club, IILM University</h4>
+            <ul>
+              <li>Coordinated the INNOQUEST data science event</li>
+              <li>Managed team logistics and technical sessions</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Secretary -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-shield-alt"></i></div>
+          <div class="timeline-content right">
+            <span class="timeline-date">Sep 2025</span>
+            <h3>Secretary</h3>
+            <h4>Code Warriors Club, IILM University</h4>
+            <ul>
+              <li>Organised coding events and workshops</li>
+              <li>Led club initiatives and mentored junior students</li>
+            </ul>
+          </div>
+        </div>
+        <!-- IIIT Delhi Hackathon -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-trophy"></i></div>
+          <div class="timeline-content left">
+            <span class="timeline-date">Mar 2025</span>
+            <h3>Hackathon Participant</h3>
+            <h4>IIIT Delhi Hackathon</h4>
+            <ul>
+              <li>Built real-world solutions under competitive conditions</li>
+              <li>Collaborated with cross-functional teams</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B.Tech -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot edu"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content right">
+            <span class="timeline-date">2023 – 2027</span>
+            <h3>B.Tech – Computer Science Engineering</h3>
+            <h4>IILM University, Greater Noida</h4>
+            <ul>
+              <li>Full-stack development, AI/ML, database systems</li>
+              <li>Active member of Code Warriors & Data Science clubs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 12th -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot edu"><i class="fas fa-school"></i></div>
+          <div class="timeline-content left">
+            <span class="timeline-date">2022 – 2023</span>
+            <h3>Class XII</h3>
+            <h4>Rawal Convent School, Faridabad</h4>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Achievements row -->
+      <div class="achievements-row reveal">
+        <div class="achievement-card">
+          <div class="ach-icon">🥉</div>
+          <p>3rd Place – ECO Chem Hackathon</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon">🥋</div>
+          <p>National Player in Martial Arts (2017)</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon">💻</div>
+          <p>IILM University Hackathon Participant</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon">📡</div>
+          <p>IoT Training – Data Flair (Nov 2024)</p>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon">🗄️</div>
+          <p>SQL Training – Data Flair (Sep 2024)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Contact</span>
+        <h2 class="section-title">Let's Talk</h2>
+        <p class="section-sub">Have a project idea or just want to say hi? My inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact info -->
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:anuragpanchalx6@gmail.com">anuragpanchalx6@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+917678470909">+91 7678470909</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="contact-label">Location</span>
+              <span>H.no-500, Sector-10, Faridabad – 121006</span>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="social-links">
+            <a href="https://github.com/AnuragPanchal6" target="_blank" class="social-btn github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/anurag-panchal-1563ba304" target="_blank" class="social-btn linkedin">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:anuragpanchalx6@gmail.com" class="social-btn email">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrap reveal">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Idea" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+              <span id="btnText">Send Message</span>
+              <i class="fas fa-paper-plane" id="btnIcon"></i>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">AP<span></span></div>
+      <p class="footer-tagline">Building tomorrow's solutions, today.</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2025 Anurag Panchal. All rights reserved. Made with <span class="heart">❤️</span> & lots of ☕</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a href="https://wa.me/917678470909" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
